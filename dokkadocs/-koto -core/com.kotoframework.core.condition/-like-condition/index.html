@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>LikeCondition</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>Koto Core</span>
+            </a>
+    </div>
+    <div>
+1.0.0-beta    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="Koto Core::com.kotoframework.core.condition/LikeCondition///PointingToDeclaration//1506263970">
+  <div class="breadcrumbs"><a href="../../../index.html">Koto Core</a><span class="delimiter">/</span><a href="../index.html">com.kotoframework.core.condition</a><span class="delimiter">/</span><a href="index.html">LikeCondition</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Like</span><wbr></wbr><span><span>Condition</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">LikeCondition</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>parameterName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">var </span>not<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">var </span>type<span class="token operator">: </span><a href="../../com.kotoframework/-condition-type/index.html">ConditionType</a><span class="token operator">?</span><span class="token operator"> = </span>LIKE<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">var </span>pos<span class="token operator">: </span><a href="../../com.kotoframework/-like-position/index.html">LikePosition</a><span class="token operator">?</span><span class="token operator"> = </span>Both<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">var </span>reName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">var </span>sql<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">&quot;&quot;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">var </span>allowNull<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>humpToLine<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>tableName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token string">&quot;&quot;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>collections<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-base-condition/index.html">BaseCondition</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator"> = </span>mutableListOf()</span></span><span class="token punctuation">)</span> : <a href="../-base-condition/index.html">BaseCondition</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Like condition</p><h4 class="">Author</h4><p class="paragraph">ousc</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Extensions">Extensions</button><button class="section-tab" data-togglable="Parameters">Parameters</button><button class="section-tab" data-togglable="Sources">Sources</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Parameters</h2>
+      <div data-togglable="Parameters">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>parameter</span><wbr></wbr><span><span>Name</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"></div></div></div></div></div><div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>not</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"></div></div></div></div></div><div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>type</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"></div></div></div></div></div><div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>pos</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"></div></div></div></div></div><div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>re</span><wbr></wbr><span><span>Name</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"></div></div></div></div></div><div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>sql</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"></div></div></div></div></div><div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>allow</span><wbr></wbr><span><span>Null</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"></div></div></div></div></div><div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>hump</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Line</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"></div></div></div></div></div><div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>value</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"></div></div></div></div></div><div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>table</span><wbr></wbr><span><span>Name</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"></div></div></div></div></div><div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>collections</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"></div></div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="287316010%2FConstructors%2F1506263970" anchor-label="LikeCondition" id="287316010%2FConstructors%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-like-condition.html"><span>Like</span><wbr></wbr><span><span>Condition</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="287316010%2FConstructors%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-like-condition.html"><span class="token function">LikeCondition</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;parameterName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;not<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;type<span class="token operator">: </span><a href="../../com.kotoframework/-condition-type/index.html">ConditionType</a><span class="token operator">?</span><span class="token operator"> = </span>LIKE<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;pos<span class="token operator">: </span><a href="../../com.kotoframework/-like-position/index.html">LikePosition</a><span class="token operator">?</span><span class="token operator"> = </span>Both<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;reName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;sql<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">&quot;&quot;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;allowNull<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;humpToLine<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;tableName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token string">&quot;&quot;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;collections<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-base-condition/index.html">BaseCondition</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator"> = </span>mutableListOf()</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="356454617%2FProperties%2F1506263970" anchor-label="allowNull" id="356454617%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-base-condition/allow-null.html"><span>allow</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="356454617%2FProperties%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><a data-name="356454617%2FProperties%2F1506263970" anchor-label="allowNull" id="356454617%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-base-condition/allow-null.html">allowNull</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1805249620%2FProperties%2F1506263970" anchor-label="collections" id="1805249620%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-base-condition/collections.html"><span><span>collections</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1805249620%2FProperties%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><a data-name="1805249620%2FProperties%2F1506263970" anchor-label="collections" id="1805249620%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-base-condition/collections.html">collections</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-base-condition/index.html">BaseCondition</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="251721202%2FProperties%2F1506263970" anchor-label="humpToLine" id="251721202%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-base-condition/hump-to-line.html"><span>hump</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Line</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="251721202%2FProperties%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><a data-name="251721202%2FProperties%2F1506263970" anchor-label="humpToLine" id="251721202%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-base-condition/hump-to-line.html">humpToLine</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1054176470%2FProperties%2F1506263970" anchor-label="not" id="1054176470%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-base-condition/not.html"><span><span>not</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1054176470%2FProperties%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><a data-name="1054176470%2FProperties%2F1506263970" anchor-label="not" id="1054176470%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-base-condition/not.html">not</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-855839243%2FProperties%2F1506263970" anchor-label="parameterName" id="-855839243%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-base-condition/parameter-name.html"><span>parameter</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-855839243%2FProperties%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><a data-name="-855839243%2FProperties%2F1506263970" anchor-label="parameterName" id="-855839243%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-base-condition/parameter-name.html">parameterName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="513683573%2FProperties%2F1506263970" anchor-label="pos" id="513683573%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-base-condition/pos.html"><span><span>pos</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="513683573%2FProperties%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><a data-name="513683573%2FProperties%2F1506263970" anchor-label="pos" id="513683573%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-base-condition/pos.html">pos</a><span class="token operator">: </span><a href="../../com.kotoframework/-like-position/index.html">LikePosition</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-213530093%2FProperties%2F1506263970" anchor-label="reName" id="-213530093%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-base-condition/re-name.html"><span>re</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-213530093%2FProperties%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><a data-name="-213530093%2FProperties%2F1506263970" anchor-label="reName" id="-213530093%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-base-condition/re-name.html">reName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1455563323%2FProperties%2F1506263970" anchor-label="sql" id="1455563323%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-base-condition/sql.html"><span><span>sql</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1455563323%2FProperties%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><a data-name="1455563323%2FProperties%2F1506263970" anchor-label="sql" id="1455563323%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-base-condition/sql.html">sql</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-174073360%2FProperties%2F1506263970" anchor-label="tableName" id="-174073360%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-base-condition/table-name.html"><span>table</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-174073360%2FProperties%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><a data-name="-174073360%2FProperties%2F1506263970" anchor-label="tableName" id="-174073360%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-base-condition/table-name.html">tableName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1511465655%2FProperties%2F1506263970" anchor-label="type" id="1511465655%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-base-condition/type.html"><span><span>type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1511465655%2FProperties%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><a data-name="1511465655%2FProperties%2F1506263970" anchor-label="type" id="1511465655%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-base-condition/type.html">type</a><span class="token operator">: </span><a href="../../com.kotoframework/-condition-type/index.html">ConditionType</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="535734520%2FProperties%2F1506263970" anchor-label="value" id="535734520%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-base-condition/value.html"><span><span>value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="535734520%2FProperties%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><a data-name="535734520%2FProperties%2F1506263970" anchor-label="value" id="535734520%2FProperties%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-base-condition/value.html">value</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="tabbedcontent">Extensions</h2>
+      <div class="table" data-togglable="Extensions"><a data-name="-1696939138%2FExtensions%2F1506263970" anchor-label="matchBoth" id="-1696939138%2FExtensions%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../match-both.html"><span>match</span><wbr></wbr><span><span>Both</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1696939138%2FExtensions%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">LikeCondition</a><span class="token operator">?</span><span class="token punctuation">.</span><a href="../match-both.html"><span class="token function">matchBoth</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-base-condition/index.html">BaseCondition</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="223744516%2FExtensions%2F1506263970" anchor-label="matchLeft" id="223744516%2FExtensions%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../match-left.html"><span>match</span><wbr></wbr><span><span>Left</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="223744516%2FExtensions%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">LikeCondition</a><span class="token operator">?</span><span class="token punctuation">.</span><a href="../match-left.html"><span class="token function">matchLeft</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-base-condition/index.html">BaseCondition</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1905309441%2FExtensions%2F1506263970" anchor-label="matchRight" id="-1905309441%2FExtensions%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../match-right.html"><span>match</span><wbr></wbr><span><span>Right</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1905309441%2FExtensions%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":koto-core:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">LikeCondition</a><span class="token operator">?</span><span class="token punctuation">.</span><a href="../match-right.html"><span class="token function">matchRight</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-base-condition/index.html">BaseCondition</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Sources</h2>
+      <div class="table" data-togglable="Sources"><a data-name="-754841388%2FSource%2F1506263970" anchor-label="https://github.com/kotoframework/kotoframework/tree/main/koto-core/src/main/kotlin/com/kotoframework/core/condition/BaseCondition.kt#L27" id="-754841388%2FSource%2F1506263970" data-filterable-set=":koto-core:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":koto-core:dokkaHtml/main" data-filterable-set=":koto-core:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="https://github.com/kotoframework/kotoframework/tree/main/koto-core/src/main/kotlin/com/kotoframework/core/condition/BaseCondition.kt#L27">jvm source</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-754841388%2FSource%2F1506263970"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
